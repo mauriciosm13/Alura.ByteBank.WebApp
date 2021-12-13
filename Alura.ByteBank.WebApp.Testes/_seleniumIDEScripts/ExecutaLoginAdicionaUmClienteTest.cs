@@ -24,6 +24,7 @@
 //  {
 //    driver.Quit();
 //  }
+
 //  //[Fact]
 //  public void ExecutaLoginAdicionaUmCliente() {
 //    driver.Navigate().GoToUrl("https://localhost:44309/");
