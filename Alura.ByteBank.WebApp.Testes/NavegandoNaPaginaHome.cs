@@ -10,14 +10,11 @@ namespace Alura.ByteBank.WebApp.Testes
 {
     public class NavegandoNaPaginaHome:IClassFixture<Fixture>
     {
-        //private readonly string diretorio;
-        private IWebDriver driver;
-
+         private IWebDriver driver;
         //Setup
         public NavegandoNaPaginaHome(Fixture fixture)
         {
-            //diretorio = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            //driver = new ChromeDriver(diretorio);
+
             driver = fixture.Driver;
         }
         [Fact]
@@ -29,7 +26,6 @@ namespace Alura.ByteBank.WebApp.Testes
             driver.Navigate().GoToUrl("https://localhost:44309");
             //Assert
             Assert.Contains("WebApp", driver.Title);
-
         }
 
         [Fact]
@@ -43,13 +39,6 @@ namespace Alura.ByteBank.WebApp.Testes
             Assert.Contains("Login", driver.PageSource);
             Assert.Contains("Home", driver.PageSource);
 
-        }
-
-        ////Cleanup
-        //public void Dispose()
-        //{
-        //    //Fechar o navegador
-        //    driver.Quit();
-        //}
+        }  
     }
 }
