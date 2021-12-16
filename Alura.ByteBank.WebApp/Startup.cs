@@ -32,7 +32,7 @@ namespace Alura.ByteBank.WebApp
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromHours(6);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
